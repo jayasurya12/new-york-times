@@ -1,0 +1,147 @@
+@font-face {
+    font-family: NewYorkTimes;
+    src: url("./NewYorkTimes.ttf");
+    font-size: 48;
+}
+.headeNewYork{
+    font-family:NewYorkTimes;
+    font-size: -webkit-xxx-large;
+}
+.titleNav{
+    font-family: NewYorkTimes;
+    font-size: xx-large;
+}
+@media(max-width:600px){
+    .titleNav{
+        font-size: x-large;
+    }
+}
+@media(max-width:380px){
+    .titleNav{
+        font-size: large;
+    }
+}
+
+ul{
+    width: 99%;
+    justify-content: space-between;
+}
+ul,li:hover{
+    cursor: pointer;
+    background-color: #f0f0f0;
+}
+
+.hidden{
+    display:none;
+}
+a{
+    text-decoration: none;
+}
+.newsCard{
+    margin-top: 15px;
+
+    /* background-color: #f7f7f7; */
+}
+.card{
+    margin-top: 10px;
+    padding: 5px;
+}
+li a:hover{
+    background-color: rgb(245, 231, 229);
+}
+@media (min-width:768px){
+    img{
+        height: 220px!important;
+    }
+}
+@media(min-width:1400px){
+    img{
+        width:410px !important;
+    }
+}
+@media(min-width:1200px){
+    img{
+        width:350px !important;
+    }
+}
+@media (min-width:992px){
+    
+    .titleNav{
+        display: none;
+    }
+}
+@media(max-width:992px){
+    .headeNewYork{
+        display: none;
+    }
+    .headerDate{
+        text-align: center;
+        font-size: x-large!important;
+    }
+}
+.headerDate{
+    font-size: large!important;
+}
+/* Spinners */
+
+.sk-cube-grid {
+    width: 40px;
+    height: 40px;
+    margin: 100px auto;
+  }
+  
+  .sk-cube-grid .sk-cube {
+    width: 33%;
+    height: 33%;
+    background-color: #333;
+    float: left;
+    -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+            animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; 
+  }
+  .sk-cube-grid .sk-cube1 {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s; }
+  .sk-cube-grid .sk-cube2 {
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s; }
+  .sk-cube-grid .sk-cube3 {
+    -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s; }
+  .sk-cube-grid .sk-cube4 {
+    -webkit-animation-delay: 0.1s;
+            animation-delay: 0.1s; }
+  .sk-cube-grid .sk-cube5 {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s; }
+  .sk-cube-grid .sk-cube6 {
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s; }
+  .sk-cube-grid .sk-cube7 {
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s; }
+  .sk-cube-grid .sk-cube8 {
+    -webkit-animation-delay: 0.1s;
+            animation-delay: 0.1s; }
+  .sk-cube-grid .sk-cube9 {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s; }
+  
+  @-webkit-keyframes sk-cubeGridScaleDelay {
+    0%, 70%, 100% {
+      -webkit-transform: scale3D(1, 1, 1);
+              transform: scale3D(1, 1, 1);
+    } 35% {
+      -webkit-transform: scale3D(0, 0, 1);
+              transform: scale3D(0, 0, 1); 
+    }
+  }
+  
+  @keyframes sk-cubeGridScaleDelay {
+    0%, 70%, 100% {
+      -webkit-transform: scale3D(1, 1, 1);
+              transform: scale3D(1, 1, 1);
+    } 35% {
+      -webkit-transform: scale3D(0, 0, 1);
+              transform: scale3D(0, 0, 1);
+    } 
+  }
