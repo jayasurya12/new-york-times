@@ -53,6 +53,7 @@ navbutton.setAttribute("type","button");
 navbutton.setAttribute("class","navbar-toggler");
 navbutton.setAttribute("data-bs-toggle","collapse");
 navbutton.setAttribute("data-bs-target","#navbarSupportedContent");
+navbutton.setAttribute("aria-controls","navbarSupportedContent");
 navbutton.setAttribute("aria-expanded","false");
 navbutton.setAttribute("aria-label","Toggle navigation");
 navbar.appendChild(navbutton);
@@ -66,7 +67,7 @@ anchorButton.setAttribute("class","navbar-brand titleNav");
 anchorButton.innerText="New York Times";
 navbar.appendChild(anchorButton);
 // navbar collapse..
-let collapseNavbar=document.createElement("span");
+let collapseNavbar=document.createElement("div");
 collapseNavbar.setAttribute("class"," collapse navbar-collapse");
 collapseNavbar.setAttribute("id","navbarSupportedContent");
 navbar.appendChild(collapseNavbar);
@@ -115,8 +116,7 @@ container2st.appendChild(spinner);
     apiCalls("home");
     navLink.forEach((value)=>{
         value.addEventListener('click',function(){
-            console.log(value.innerHTML);
-            
+            collapseNavbar.setAttribute("class"," collapse navbar-collapse");
             let newsContainer=document.querySelectorAll(".card");
             newsContainer.forEach(cards=>{
                 cards.classList.add("hidden");
