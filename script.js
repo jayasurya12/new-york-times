@@ -1,5 +1,3 @@
-
-
 let container1st=document.createElement("div");
 container1st.setAttribute("class","container");
 document.body.appendChild(container1st);
@@ -102,7 +100,7 @@ spinner.innerHTML=`
     <div class="sk-cube sk-cube8"></div>
     <div class="sk-cube sk-cube9"></div>
 `
-container2st.appendChild(spinner);
+    container2st.appendChild(spinner);
 
     let container3rd=document.createElement("div");
     container3rd.setAttribute("class","container");
@@ -114,6 +112,7 @@ container2st.appendChild(spinner);
 
     let navLink=document.querySelectorAll(".nav-link");
     apiCalls("home");
+
     navLink.forEach((value)=>{
         value.addEventListener('click',function(){
             collapseNavbar.setAttribute("class"," collapse navbar-collapse");
@@ -183,9 +182,10 @@ async function apiCalls(valueTitle){
 
     let img =document.createElement("img");
     img.setAttribute("class","img-thumbnail");
-    img.setAttribute("src",data.results[i].multimedia[0].url)
+        img.setAttribute("src",data.results[i].multimedia?data.results[i].multimedia[0].url:"noImage");
+        img.setAttribute("alt","No Images");
     cardCol2.appendChild(img);
-        
+
     cardRow.appendChild(cardCol2);
     (function(){
     const dates=new Date();
@@ -197,7 +197,6 @@ async function apiCalls(valueTitle){
     let get= new Date(data.results[0].published_date);
     let newdate=get.toDateString()
     })();
-    
     }
 })
 .catch((err)=>{
